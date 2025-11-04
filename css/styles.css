@@ -17,9 +17,34 @@
   }
 */
 
+/* 04.11 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {font-family: "Roboto", sans-serif;
      color: #434455;
      background-color: #FFFFFF;
+     /* 04.11 */
+     margin: 0;
+     padding: 0;
+     display: flex;
+     flex-direction: column;
+}
+
+/* Обнулення стандартних відступів */
+h1, h2, h3, h4, h5, h6,
+p {
+  margin: 0; /* видаляє зовнішні відступи */
+}
+
+/* Робимо зображення блочними елементами */
+img {
+  display: block; /* блочний елемент */
+  max-width: 100%; /* щоб не виходили за межі контейнера */
+  height: auto; /* зберігає пропорції */
 }
 
 /* Скидаємо підкреслення у посилань */
@@ -29,8 +54,82 @@ a {
   
 /* Скидаємо стандартні маркери у списках */
 ul {
+    margin: 0;  /* прибирає зовнішні відступи */
+    padding-left: 0; /* прибирає внутрішній відступ зліва */
     list-style: none;
   }
+
+  /* 04.11 */
+  .container { 
+    max-width: 1158px;
+    padding-left: 0; 
+    padding-right: 0; 
+    margin-left:  0;
+    margin-right:  0;
+    }
+
+  .page-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    flex-grow: 1;
+  } 
+
+  section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  
+  .header .conteiner {
+    padding: 10px;
+    width: 1460px;
+    height: 92px;
+  }
+
+  .header .conteiner .nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 24px;
+  }
+
+  .header .conteiner .adress {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+  }
+
+  .section_first .container {
+    width: 1440px;
+    height: 600px;
+  }
+
+  .section_second .container {
+    height: 104px;
+
+  }
+  
+    
+   .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+   } 
+
+
 
   .logo {
     font-family: "Raleway", sans-serif;
@@ -84,6 +183,10 @@ ul {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
+  border-radius: 4px;
+  padding: 16px 32px;
+  width: 169px;
+  height: 56px;
 }
 .button:hover, button:active, button:focus {
   color: #FFFFFF;
