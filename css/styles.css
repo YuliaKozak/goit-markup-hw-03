@@ -62,59 +62,34 @@ a {
   text-decoration: none;
 }
 
-/* 04.11 */
+/* Контейнер — стандартизує розміри контенту */
 .container {
-  max-width: 1158px;
-  width: 100%;
-  padding-top: 60px;
-  padding-bottom: 60px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 1158px;
+  margin: 0 auto;
   padding: 0 15px;
 }
 
 /* #region header */
 
+/* Хедер — нижня рамка */
 .page-header {
   border-bottom: 1px solid #e7e9fc;
 }
 
+/* Контейнер усередині хедера */
 .page-header .container {
   display: flex;
-  justify-content: space-between;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  /* навігація + контакти в одну лінію */
+}
+
+/* Навігація */
+.nav {
+  display: flex;
   align-items: center;
-
-
-
+  /* вирівнювання логотипу та меню по вертикалі */
 }
 
-.menu {
-  display: flex;
-  gap: 76px;
-  align-items: center;
-
-}
-
-.first-link {
-  display: flex;
-  gap: 40px;
-  padding-left: 24px;
-  padding-right: 24px;
-  padding-top: 24px;
-  padding-bottom: 24px;
-}
-
-
-
-.first-link_adress {
-  display: flex;
-  gap: 40px;
-  padding-top: 24px;
-  padding-bottom: 24px;
-}
-
+/* Логотип */
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -124,8 +99,23 @@ a {
   text-transform: uppercase;
   color: #4d5ae5;
   margin-right: 76px;
+  /* відступ від логотипу */
 }
 
+/* Меню */
+.menu {
+  display: flex;
+  gap: 40px;
+  /* відступ між пунктами меню */
+}
+
+/* Посилання у пунктах меню */
+.first-link {
+  padding: 24px 0;
+  /* відступи всередині посилання */
+}
+
+/* Загальний стиль для посилань у меню */
 .link {
   font-weight: 500;
   line-height: 1.5;
@@ -138,10 +128,19 @@ a {
   color: #404bbf;
 }
 
+/* Адресний блок */
 .adress {
   font-style: normal;
 }
 
+/* Список контактів */
+.first-link_adress {
+  display: flex;
+  gap: 40px;
+  /* відступ між пунктами контактів */
+}
+
+/* Посилання у контактах */
 .link_adress {
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -152,6 +151,8 @@ a {
 .link_adress:focus {
   color: #404bbf;
 }
+
+/* #endregion header */
 
 /* #endregion header */
 
@@ -368,8 +369,8 @@ button:focus {
 .span {
   color: #f4f4fd;
 }
-
 /* #endregion section4 */
+
 /* #endregion hero */
 
 /* #region footer */
